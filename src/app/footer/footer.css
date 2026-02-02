@@ -1,165 +1,323 @@
-.footer {
-  background: var(--color-tertiary);
-  color: var(--color-primary);
-  font-size: 14px;
-  border-top: 3px solid var(--color-secondary);
+footer{
+    position: relative;
+    width: 100%;
+    padding: 50px 0px;
+    background-color: var(--color-primary);
+    overflow: hidden;
+    transition: background-color 0.3s ease;
 }
 
-/* CONTENEDOR PRINCIPAL */
-.footer-main {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 64px 24px 40px;
+footer::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: var(--color-primary);
+    opacity: 0.1;
+    pointer-events: none;
 }
 
-.footer-container {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1.2fr;
-  gap: 48px;
-  align-items: start;
+footer::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--footer-overlay);
+    pointer-events: none;
 }
 
-/* MARCA / LOGO */
-.footer-logo {
-  width: 14rem;
-  height: 4rem;
-  background-image: url('../../assets/logofuncionariosolo.PNG');
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: left center;
-  margin-bottom: 12px;
+footer > * {
+    position: relative;
+    z-index: 1;
 }
 
-.footer-brand p {
-  line-height: 1.7;
-  max-width: 380px;
-  color: var(--text-muted);
+.container__footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 100px;
 }
 
-/* ENLACES */
-.footer-links h4,
-.footer-contact h4 {
-  color: var(--color-primary);
-  font-size: 12px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  font-weight: 600;
+.box__footer{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
 }
 
-.footer-links ul,
-.footer-contact ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.box__footer .logo{
+    margin-top: -63px;
+    height: 14rem;
+    width: 100%;
+    min-width: 200px;
+    background-image: url('../../assets/logofuncionariosolo.PNG');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    z-index: 2;
 }
 
-.footer-links li {
-  margin-bottom: 12px;
+.institutional-logos {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.footer-links a {
-  color: var(--text-muted);
-  text-decoration: none;
-  transition: color var(--transition-fast), transform var(--transition-fast);
+.institutional-logo {
+    width: 80px;
+    height: 80px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
 }
 
-.footer-links a:hover {
-  color: var(--color-secondary);
+.institutional-logo:hover {
+    transform: scale(1.05);
 }
 
-/* CONTACTO */
-.footer-contact li {
-  margin-bottom: 16px;
+.institutional-logo.municipal {
+
+    background-image: url('../../assets/Municipal.png');
 }
 
-.footer-contact span {
-  display: block;
-  font-size: 10px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--color-secondary);
-  margin-bottom: 4px;
-  font-weight: 600;
+.institutional-logo.dolores {
+        width: 200px;
+    height: 150px;
+    background-image: url('../../assets/dolores.png');
+    filter: invert(1);
 }
 
-.footer-contact a {
-  color: var(--text-muted);
-  text-decoration: none;
-  transition: color var(--transition-fast);
+.box__footer .terms{
+    max-width: 350px;
+    margin-top: 20px;
+    font-weight: 500;
+    color: var(--footer-pattern);
+    font-size: 18px;
+    transition: color 0.3s ease;
 }
 
-.footer-contact a:hover {
-  color: var(--color-secondary);
+.box__footer h2{
+    margin-bottom: 30px;
+    color: var(--footer-pattern);
+    font-weight: 700;
+    transition: color 0.3s ease;
 }
 
-.footer-contact li:last-child span + * {
-  color: var(--text-muted);
+.box__footer a{
+    margin-top: 10px;
+    color: var(--footer-pattern);
+    font-weight: 600;
+    transition: color 0.3s ease;
+    text-decoration: none;
 }
 
-/* BARRA INFERIOR */
-.footer-bottom {
-  border-top: 1px solid var(--border-light);
-  padding: 24px 24px 28px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  text-align: center;
-  background: var(--bg-light);
+.box__footer a:hover{
+    opacity: 0.8;
 }
 
-.footer-bottom .copyright {
-  font-size: 12px;
-  color: var(--text-muted);
-  margin: 0;
+.box__footer a .fab{
+    font-size: 20px;
 }
 
-.footer-bottom .developer {
-  font-size: 13px;
-  margin: 0;
-  color: var(--text-muted);
+.box__copyright{
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    padding: 0px 40px;
 }
 
-.footer-bottom .developer a {
-  color: var(--color-secondary);
-  text-decoration: none;
-  font-weight: 600;
-  transition: color var(--transition-fast), text-decoration var(--transition-fast);
+.box__copyright p{
+    margin-top: 20px;
+    color: var(--text-gray, #7a7a7a);
+    transition: color 0.3s ease;
 }
 
-.footer-bottom .developer a:hover {
-  color: var(--color-primary);
-  text-decoration: underline;
+.box__copyright hr{
+    border: none;
+    height: 1px;
+    background-color: var(--border, #7a7a7a);
+    transition: background-color 0.3s ease;
 }
 
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  .footer-container {
-    grid-template-columns: 1fr;
-    gap: 40px;
+/* Responsive */
+@media (max-width: 1024px) {
+  .container__footer {
+    padding: 0 20px;
+    margin-top: 80px;
   }
 
-  .footer-brand p {
+  .box__footer {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  footer {
+    padding: 40px 0;
+  }
+
+  .container__footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 60px;
+    padding: 0 20px;
+  }
+
+  .box__footer {
+    width: 100%;
+    max-width: 100%;
+    padding: 25px 20px;
+    align-items: center;
+  }
+
+  .box__footer .logo {
+    margin: 0 auto 20px;
+    margin-top: -30px;
+    height: 10rem;
+    width: 100%;
+    min-width: 180px;
+    max-width: 300px;
+    justify-content: center;
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  .institutional-logos {
+    justify-content: center;
+    margin: 15px auto;
+    gap: 12px;
+  }
+
+  .institutional-logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .box__footer .terms {
+    text-align: center;
+    margin: 20px auto 0;
     max-width: 100%;
   }
-}
 
-@media (max-width: 600px) {
-  .footer-main {
-    padding: 48px 20px 32px;
+  .box__footer h2 {
+    text-align: center;
+    margin-bottom: 20px;
   }
 
-  .footer-bottom {
-    padding: 20px 16px 24px;
+  .box__footer a {
+    text-align: center;
+  }
+
+  .box__copyright {
+    padding: 0 20px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
+    padding: 30px 0;
+  }
+
+  .container__footer {
+    margin-top: 40px;
+    padding: 0 15px;
+  }
+
+  .box__footer {
+    padding: 20px 15px;
+  }
+
+  .box__footer .logo {
+    height: 8rem;
+    width: 100%;
+    min-width: 150px;
+    max-width: 250px;
+    margin: 0 auto 20px;
+    margin-top: -20px;
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  .institutional-logos {
+    justify-content: center;
+    margin: 12px auto;
     gap: 10px;
   }
 
-  .footer-bottom .copyright {
-    font-size: 11px;
+  .institutional-logo {
+    width: 45px;
+    height: 45px;
   }
 
-  .footer-bottom .developer {
-    font-size: 12px;
+  .box__footer .terms {
+    font-size: 16px;
+    margin-top: 15px;
+  }
+
+  .box__footer h2 {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+  }
+
+  .box__footer a {
+    font-size: 0.9rem;
+    margin-top: 8px;
+  }
+
+  .box__copyright {
+    padding: 0 15px;
+  }
+
+  .box__copyright p {
+    font-size: 0.85rem;
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 360px) {
+  .box__footer {
+    padding: 15px 10px;
+  }
+
+  .box__footer .logo {
+    height: 6rem;
+    width: 100%;
+    min-width: 120px;
+    max-width: 200px;
+    margin: 0 auto 15px;
+    margin-top: -15px;
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  .institutional-logos {
+    justify-content: center;
+    margin: 10px auto;
+    gap: 8px;
+  }
+
+  .institutional-logo {
+    width: 35px;
+    height: 35px;
+  }
+
+  .box__footer .terms {
+    font-size: 14px;
+  }
+
+  .box__footer h2 {
+    font-size: 1.1rem;
   }
 }

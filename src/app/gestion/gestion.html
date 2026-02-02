@@ -1,72 +1,63 @@
 <section id="gestion" class="gestion">
-    <h2>Logros de Gestión</h2>
-    <p class="subtitle">Hitos alcanzados durante la actual administración.</p>
+    <h2>Mis Logros</h2>
+    <p class="subtitle">Hitos alcanzados en mi gestión al frente de Protección Ciudadana.</p>
 
     <div class="logros">
-      <div class="logro-card">
-        <span class="fecha">MAYO 2023</span>
-        <h4>Centro de Monitoreo 2.0</h4>
-        <p>Inauguración del centro con inteligencia artificial para detección temprana.</p>
-      </div>
-
-      <div class="logro-card">
-        <span class="fecha">OCTUBRE 2023</span>
-        <h4>Plan de Seguridad Vecinal</h4>
-        <p>Implementación de 500 foros vecinales junto a fuerzas locales.</p>
-      </div>
-
-      <div class="logro-card">
-        <span class="fecha">JUNIO 2024</span>
-        <h4>Renovación de Flota</h4>
-        <p>Incorporación de patrulleros con tecnología de comunicación encriptada.</p>
+      <div class="logro-card" *ngFor="let l of logros">
+        <div class="logro-img" [style.backgroundImage]="'url(' + l.img + ')'"></div>
+        <div class="logro-texto">
+          <span class="fecha">{{ l.fecha }}</span>
+          <h4>{{ l.titulo }}</h4>
+          <p>{{ l.texto }}</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- EJES ESTRATÉGICOS -->
   <section class="ejes">
-    <h3>Ejes Estratégicos</h3>
+    <h3>Mi Enfoque Estratégico</h3>
     <div class="ejes-grid">
       <div class="eje">
         <span>01</span>
-        <h4>Prevención Activa</h4>
-        <p>Intervención temprana y programas de inclusión.</p>
+        <h4>Coordinación Policial</h4>
+        <p>Reuniones con Departamental Dolores, comisarías y Policía Local para planificar estrategias y mejorar la presencia en calle.</p>
       </div>
       <div class="eje">
         <span>02</span>
-        <h4>Innovación IT</h4>
-        <p>Digitalización y modernización tecnológica.</p>
+        <h4>Prevención</h4>
+        <p>Botones antipánico digitales conectados al COM, enfocados en adultos mayores, personas con discapacidad y mujeres.</p>
       </div>
       <div class="eje">
         <span>03</span>
-        <h4>Fortalecimiento</h4>
-        <p>Capacitación continua del personal.</p>
+        <h4>Seguridad Rural</h4>
+        <p>Mesas de trabajo con CPR y productores, cámaras de videovigilancia y geolocalización para asistencia rápida.</p>
       </div>
       <div class="eje">
         <span>04</span>
-        <h4>Cercanía Ciudadana</h4>
-        <p>Respuesta inmediata al vecino.</p>
+        <h4>Capacitación</h4>
+        <p>Talleres de prevención comunitaria y ciberdelitos con la Subsecretaría de Participación Ciudadana.</p>
       </div>
     </div>
   </section>
 
-  <!-- ACTUALIDAD -->
-  <section class="actualidad">
-    <h3>Actualidad y Actividad</h3>
-    <div class="noticias">
-      <article class="noticia">Inauguración del nuevo Centro de Monitoreo</article>
-      <article class="noticia">Balance operativo interagencial</article>
-      <article class="noticia">Convenio con la Unión Europea</article>
+  <!-- GALERÍA EN IMÁGENES -->
+  <section class="galeria-gestion">
+    <h3>Mi Gestión en Imágenes</h3>
+    <div class="galeria-grid">
+      <div class="galeria-item" *ngFor="let g of galeriaGestion" [style.backgroundImage]="'url(' + g.img + ')'">
+        <span class="galeria-titulo">{{ g.titulo }}</span>
+      </div>
     </div>
   </section>
 
   <!-- MÉTRICAS -->
   <section class="metricas">
-    <h3>Impacto Cuantitativo en Gestión</h3>
+    <h3>Resultados de mi Gestión</h3>
     <div class="metricas-grid">
-      <div class="metrica"><strong>-45%</strong><span>Delitos</span></div>
-      <div class="metrica"><strong>300+</strong><span>Nuevas patrullas</span></div>
-      <div class="metrica"><strong>12 min</strong><span>Respuesta</span></div>
-      <div class="metrica"><strong>8.5/10</strong><span>Confianza</span></div>
+      <div class="metrica"><strong>+3.000</strong><br><span>Botones antipánico</span></div>
+      <div class="metrica"><strong>5</strong><br><span>Móviles en servicio</span></div>
+      <div class="metrica"><strong>COM</strong><br><span>Conexión directa</span></div>
+      <div class="metrica"><strong>Dolores</strong><br><span>Municipalidad</span></div>
     </div>
   </section>

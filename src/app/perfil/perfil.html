@@ -14,7 +14,7 @@
   
       <div class="professional-image">
         <img src="../../assets/images/perfil2.png" alt="Perfil profesional">
-        <span class="badge">FILOSOFÍA<br>Gestión cercana<br>con datos y personas</span>
+        <span class="badge">MI FILOSOFÍA<br>Gestión cercana<br>con datos y personas</span>
       </div>
   
       <div class="professional-text">
@@ -22,15 +22,15 @@
         <h2>Educación y Visión de Mando</h2>
   
         <p>
-          Formado en la Escuela Superior de Seguridad con especialización en
-          <strong>Gestión de Políticas Públicas</strong> por la Universidad de
-          Defensa. Mi enfoque se centra en la integración de tecnologías
-          exponenciales para la optimización de recursos policiales.
+          Experiencia en seguridad y administración pública. Mi enfoque combina
+          coordinación operativa con fuerzas policiales, implementación de
+          tecnología de prevención (botones antipánico, videovigilancia) y
+          trabajo cercano con la comunidad.
         </p>
   
         <ul class="credentials">
-          <li>Doctorado en Seguridad</li>
-          <li>Certificación Estratégica</li>
+          <li>Secretario de Protección Ciudadana e Inclusión Social</li>
+          <li>Designado por Decreto Municipal Nº 2164/2023 (27/12/2023)</li>
         </ul>
       </div>
   
@@ -42,14 +42,15 @@
       
           <!-- TEXTO -->
           <div class="profile-text">
-            <span class="section-tag">Perfil Institucional</span>
+            <span class="section-tag">Mi Rol</span>
       
             <p>
-              Con más de 20 años de experiencia en la administración pública y la
-              gestión de crisis, Horacio G. Gauna ha dedicado su carrera a transformar
-              los sistemas de seguridad nacional. Su enfoque combina la rigurosidad
-              técnica con una profunda sensibilidad social, priorizando siempre la
-              prevención y el fortalecimiento de las instituciones.
+              Como Secretario de Protección Ciudadana / Seguridad Ciudadana en la
+              Municipalidad de Dolores, lidero la política local de seguridad
+              comunitaria. Coordino con la Departamental Dolores, comisarías y
+              Policía Local; implemento programas de prevención como los botones
+              antipánico; gestiono recursos operativos y promuevo la seguridad rural
+              junto al CPR y productores.
             </p>
       
             <div class="profile-cards">
@@ -69,9 +70,13 @@
           <div class="profile-media">
             <img
               src="../../assets/images/reunion5.jpg"
-              alt="Reunión institucional"
+              alt="Horacio C. Gauna en trabajo"
               loading="lazy"
+              class="profile-img-principal"
             />
+            <div class="profile-mini-galeria">
+              <img *ngFor="let i of imagenesTrabajo" [src]="i.img" [alt]="i.alt" loading="lazy" />
+            </div>
           </div>
       
         </div>
@@ -81,18 +86,18 @@
   <section class="metrics">
     <div class="metrics-container">
       <div class="metric">
-        <span>-45%</span>
-        <p>Reducción del crimen<br><small>en zonas críticas</small></p>
+        <span>+3.000</span>
+        <p>Botones antipánico<br><small>entregados con capacitación</small></p>
       </div>
   
       <div class="metric">
-        <span>+12k</span>
-        <p>Efectivos capacitados<br><small>a nivel nacional</small></p>
+        <span>5</span>
+        <p>Móviles recuperados<br><small>para patrullaje preventivo</small></p>
       </div>
   
       <div class="metric">
-        <span>98%</span>
-        <p>Efectividad tecnológica<br><small>en sistemas de vigilancia</small></p>
+        <span>100%</span>
+        <p>Conexión al COM<br><small>en botones antipánico</small></p>
       </div>
     </div>
   </section>

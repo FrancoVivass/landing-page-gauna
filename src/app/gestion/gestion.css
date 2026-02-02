@@ -20,11 +20,23 @@ section {
   }
   
   .logro-card {
-    min-width: 260px;
+    min-width: 300px;
     background: var(--color-tertiary);
-    padding: 20px;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-medium);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .logro-img {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .logro-texto {
+    padding: 20px;
   }
   
   .fecha {
@@ -59,24 +71,64 @@ section {
     font-weight: bold;
   }
   
-  /* ACTUALIDAD */
-  .noticias {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 20px;
+  
+  /* GALERÍA GESTIÓN */
+  .galeria-gestion {
+    padding: 64px 24px;
+    background: var(--bg-light);
   }
   
-  .noticia {
-    background: var(--color-tertiary);
-    padding: 20px;
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-soft);
+  .galeria-gestion h3 {
+    margin-bottom: 32px;
+  }
+  
+  .galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .galeria-item {
+    aspect-ratio: 1;
+    background-size: cover;
+    background-position: center;
+    border-radius: var(--radius-md);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .galeria-item::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent 50%);
+  }
+  
+  .galeria-titulo {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 12px;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    z-index: 2;
   }
   
   /* MÉTRICAS */
   .metricas {
     background: linear-gradient(135deg, var(--color-primary), var(--color-accurate));
     color: var(--color-tertiary);
+    padding: 80px 24px;
+  }
+
+  .metricas h3 {
+    margin-bottom: 40px;
+    font-size: 2rem;
+    text-align: center;
   }
   
   .metricas-grid {
@@ -98,4 +150,57 @@ section {
   .metrica strong {
     font-size: 28px;
     color: var(--color-secondary);
+  }
+  
+  /* RESPONSIVE GESTIÓN */
+  @media (max-width: 768px) {
+    .galeria-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .metricas {
+      padding: 60px 20px;
+    }
+
+    .metricas h3 {
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+    }
+
+    .metricas-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .logro-img {
+      height: 180px;
+    }
+
+    .logro-card {
+      min-width: 280px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .metricas h3 {
+      font-size: 1.3rem;
+      margin-bottom: 25px;
+    }
+
+    .metricas-grid {
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    .logro-img {
+      height: 160px;
+    }
+
+    .metrica {
+      padding: 20px;
+    }
+
+    .metrica strong {
+      font-size: 24px;
+    }
   }

@@ -12,58 +12,49 @@ export class Trayectoria {
   careerTimeline = [
     {
       side: 'right',
-      title: 'Secretario de Seguridad',
-      period: 'Presente',
-      text: 'Liderazgo integral de las políticas de seguridad ciudadana.',
+      title: 'Secretario de Protección Ciudadana e Inclusión Social',
+      period: 'Dic 2023 – Presente',
+      text: 'Liderazgo de la política local de seguridad en la Municipalidad de Dolores. Coordinación con policía provincial y municipal.',
       active: true
     },
     {
       side: 'left',
-      title: 'Director General de Coordinación',
-      period: '2018 – 2022',
-      text: 'Gestión de recursos y despliegue estratégico regional.',
-      active: false
-    },
-    {
-      side: 'right',
-      title: 'Jefe de Operaciones',
-      period: '2010 – 2018',
-      text: 'Estrategia táctica y comando de fuerzas especiales.',
+      title: 'Experiencia en seguridad y administración pública',
+      period: 'Antes de 2023',
+      text: 'Trayectoria previa en el ámbito de la seguridad y el servicio público en Dolores.',
       active: false
     }
   ];
 
   trayectoriaProfesional = [
     {
-      year: '2005',
-      title: 'Director de Prevención',
-      text: 'Inicio de carrera en gestión de seguridad municipal.'
+      year: '2023',
+      title: 'Designación como Secretario',
+      text: 'Designado el 27 de diciembre de 2023 mediante Decreto Municipal Nº 2164/2023.'
     },
     {
-      year: '2012',
-      title: 'Asesor Estratégico',
-      text: 'Consultor en políticas públicas y derechos humanos.'
-    },
-    {
-      year: '2018',
-      title: 'Subsecretario Nacional',
-      text: 'Modernización de protocolos de intervención.'
+      year: '2024',
+      title: 'Plan Integral de Seguridad Ciudadana',
+      text: 'Entrega de más de 3.000 botones antipánico, móviles recuperados y mesa de trabajo por la seguridad.'
     },
     {
       year: 'Presente',
-      title: 'Secretario de Seguridad',
-      text: 'Conducción del Plan Nacional de Seguridad Tecnológica.'
+      title: 'Secretario de Protección Ciudadana',
+      text: 'Coordinación policial, prevención, seguridad rural y capacitaciones comunitarias.'
     }
   ];
 
   galeria = [
-    {
-      title: 'Dirección de Inteligencia Operativa',
-      img: 'https://images.unsplash.com/photo-1601597111158-2fceff292cdc'
-    },
-    {
-      title: 'Coordinación de Seguridad Urbana',
-      img: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e'
-    }
+    { title: 'Dolores, lugar seguro', img: '/assets/images/doloreslugarseguro.jpg' },
+    { title: 'Coordinación con fuerzas de seguridad', img: '/assets/images/reunion5.jpg' },
+    { title: 'Entrega de botones antipánico', img: '/assets/images/botonantipanico.jpg' },
+    { title: 'Capacitaciones y conferencias', img: '/assets/images/conferencia.jpg' },
+    { title: 'Trabajo en territorio', img: '/assets/images/policia1.jpg' },
+    { title: 'Presencia policial', img: '/assets/images/policia2.jpg' },
+    { title: 'Prevención y patrullaje', img: '/assets/images/Policia3.jpg' },
+    { title: 'Mesa de trabajo por la seguridad', img: '/assets/images/reunion1.jpg' },
+    { title: 'Reunión con autoridades', img: '/assets/images/reunion2.jpg' },
+    { title: 'Planificación operativa', img: '/assets/images/reunion3.jpg' },
+    { title: 'Coordinación interinstitucional', img: '/assets/images/reunion4.jpg' }
   ];
 }
