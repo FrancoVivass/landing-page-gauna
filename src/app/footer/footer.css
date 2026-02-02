@@ -1,103 +1,165 @@
 .footer {
-    background: #0f172a; /* azul institucional oscuro */
-    color: #cbd5e1;
-    font-size: 14px;
-  }
-  
-  /* CONTENEDOR */
+  background: var(--color-tertiary);
+  color: var(--color-primary);
+  font-size: 14px;
+  border-top: 3px solid var(--color-secondary);
+}
+
+/* CONTENEDOR PRINCIPAL */
+.footer-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 64px 24px 40px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.2fr;
+  gap: 48px;
+  align-items: start;
+}
+
+/* MARCA / LOGO */
+.footer-logo {
+  width: 14rem;
+  height: 4rem;
+  background-image: url('../../assets/logofuncionariosolo.PNG');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left center;
+  margin-bottom: 12px;
+}
+
+.footer-brand p {
+  line-height: 1.7;
+  max-width: 380px;
+  color: var(--text-muted);
+}
+
+/* ENLACES */
+.footer-links h4,
+.footer-contact h4 {
+  color: var(--color-primary);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.footer-links ul,
+.footer-contact ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.footer-links a:hover {
+  color: var(--color-secondary);
+}
+
+/* CONTACTO */
+.footer-contact li {
+  margin-bottom: 16px;
+}
+
+.footer-contact span {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.footer-contact a {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.footer-contact a:hover {
+  color: var(--color-secondary);
+}
+
+.footer-contact li:last-child span + * {
+  color: var(--text-muted);
+}
+
+/* BARRA INFERIOR */
+.footer-bottom {
+  border-top: 1px solid var(--border-light);
+  padding: 24px 24px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+  background: var(--bg-light);
+}
+
+.footer-bottom .copyright {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.footer-bottom .developer {
+  font-size: 13px;
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.footer-bottom .developer a {
+  color: var(--color-secondary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color var(--transition-fast), text-decoration var(--transition-fast);
+}
+
+.footer-bottom .developer a:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
   .footer-container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 64px 24px;
-    display: grid;
-    grid-template-columns: 2fr 1fr 1.2fr;
-    gap: 48px;
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
-  
-  /* BRAND */
-  .footer-brand h3 {
-    color: white;
-    font-size: 20px;
-    margin-bottom: 12px;
-  }
-  
+
   .footer-brand p {
-    line-height: 1.6;
-    max-width: 420px;
+    max-width: 100%;
   }
-  
-  /* LINKS */
-  .footer-links h4,
-  .footer-contact h4 {
-    color: white;
-    font-size: 14px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    margin-bottom: 16px;
+}
+
+@media (max-width: 600px) {
+  .footer-main {
+    padding: 48px 20px 32px;
   }
-  
-  .footer-links ul,
-  .footer-contact ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .footer-links li {
-    margin-bottom: 10px;
-  }
-  
-  .footer-links a {
-    color: #cbd5e1;
-    text-decoration: none;
-    transition: color 0.2s ease;
-  }
-  
-  .footer-links a:hover {
-    color: var(--color-secondary);
-  }
-  
-  /* CONTACTO */
-  .footer-contact li {
-    margin-bottom: 14px;
-  }
-  
-  .footer-contact span {
-    display: block;
-    font-size: 11px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: #94a3b8;
-    margin-bottom: 2px;
-  }
-  
-  .footer-contact a {
-    color: #cbd5e1;
-    text-decoration: none;
-  }
-  
-  .footer-contact a:hover {
-    color: var(--color-secondary);
-  }
-  
-  /* BOTTOM */
+
   .footer-bottom {
-    border-top: 1px solid rgba(255,255,255,0.08);
-    text-align: center;
-    padding: 20px 16px;
+    padding: 20px 16px 24px;
+    gap: 10px;
+  }
+
+  .footer-bottom .copyright {
+    font-size: 11px;
+  }
+
+  .footer-bottom .developer {
     font-size: 12px;
-    color: #94a3b8;
   }
-  
-  .footer-bottom span {
-    color: #e5e7eb;
-  }
-  
-  /* RESPONSIVE */
-  @media (max-width: 900px) {
-    .footer-container {
-      grid-template-columns: 1fr;
-      gap: 40px;
-    }
-  }
-  
+}

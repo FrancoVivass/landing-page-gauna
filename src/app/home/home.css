@@ -169,7 +169,7 @@
 
 .mission {
     padding: 5rem 6rem;
-    background-color: #f8f9fb;
+    background-color: var(--bg-light);
   }
   
   .mission-container {

@@ -1,43 +1,40 @@
 <footer class="footer">
 
+  <div class="footer-main">
     <div class="footer-container">
-  
-      <!-- COLUMNA 1 -->
+
+      <!-- MARCA -->
       <div class="footer-brand">
-        <h3>Horacio G. Gauna</h3>
+        <div class="footer-logo"></div>
         <p>
           Gestión pública orientada a la seguridad ciudadana,
           la transparencia institucional y la construcción
           de políticas sostenibles.
         </p>
       </div>
-  
-      <!-- COLUMNA 2 -->
+
+      <!-- ENLACES -->
       <nav class="footer-links">
         <h4>Secciones</h4>
         <ul>
-          <li><a routerLink="/">Inicio</a></li>
-          <li><a routerLink="/trayectoria">Trayectoria</a></li>
-          <li><a routerLink="/gestion">Gestión</a></li>
-          <li><a routerLink="/contacto">Contacto</a></li>
+          <li><a href="#perfil">Perfil</a></li>
+          <li><a href="#trayectoria">Trayectoria</a></li>
+          <li><a href="#gestion">Gestión</a></li>
+          <li><a href="#contacto">Contacto</a></li>
         </ul>
       </nav>
-  
-      <!-- COLUMNA 3 -->
+
+      <!-- CONTACTO -->
       <div class="footer-contact">
         <h4>Contacto institucional</h4>
         <ul>
           <li>
             <span>Email</span>
-            <a href="mailto:contacto@institucional.gob">
-              contacto@institucional.gob
-            </a>
+            <a href="mailto:contacto@institucional.gob">contacto@institucional.gob</a>
           </li>
           <li>
             <span>Teléfono</span>
-            <a href="tel:+541100000000">
-              +54 11 0000 0000
-            </a>
+            <a href="tel:+541100000000">+54 11 0000 0000</a>
           </li>
           <li>
             <span>Ubicación</span>
@@ -45,16 +42,18 @@
           </li>
         </ul>
       </div>
-  
+
     </div>
-  
-    <!-- LINEA INFERIOR -->
-    <div class="footer-bottom">
-      <p>
-        © {{ year }} · Todos los derechos reservados ·
-        <span>Gestión Institucional</span>
-      </p>
-    </div>
-  
-  </footer>
-  
+  </div>
+
+  <!-- BARRA INFERIOR -->
+  <div class="footer-bottom">
+    <p class="copyright">
+      © {{ year }} · Todos los derechos reservados · Gestión Institucional
+    </p>
+    <p class="developer">
+      Desarrollado por <a href="https://VivasFranco.dev" target="_blank" rel="noopener noreferrer">FrancoVivas</a>
+    </p>
+  </div>
+
+</footer>

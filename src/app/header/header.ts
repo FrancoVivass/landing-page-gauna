@@ -24,8 +24,8 @@ export class Header {
     document.body.classList.remove('no-scroll');
   }
 
-  irAPerfil(): void {
-    this.closeMenu(); // 🔑 importante en mobile
-    this.viewportScroller.scrollToAnchor('perfil');
+  scrollTo(section: string): void {
+    this.closeMenu();
+    this.viewportScroller.scrollToAnchor(section);
   }
 }

@@ -4,14 +4,13 @@
 <header class="header">
     <div class="header-inner">
   
-      <div class="logo"></div>
+      <a href="#"><div class="logo"></div></a>
   
       <nav class="nav-desktop">
-        <a (click)="irAPerfil()">Perfil</a>
-        <a href="#">Trayectoria</a>
-        <a href="#">Impacto</a>
-        <a href="#">Gestión</a>
-        <a href="#">Contacto</a>
+        <a (click)="scrollTo('perfil')">Perfil</a>
+        <a (click)="scrollTo('trayectoria')">Trayectoria</a>
+        <a (click)="scrollTo('gestion')">Gestión</a>
+        <a (click)="scrollTo('contacto')">Contacto</a>
       </nav>
   
       <a href="https://estudiojuridico-frontend.pages.dev/" class="logo-link">
@@ -43,11 +42,10 @@
       </div>
   
       <nav class="drawer-nav">
-        <a (click)="irAPerfil()" (click)="closeMenu()">Perfil</a>
-        <a href="#" (click)="closeMenu()">Trayectoria</a>
-        <a href="#" (click)="closeMenu()">Impacto</a>
-        <a href="#" (click)="closeMenu()">Gestión</a>
-        <a href="#" (click)="closeMenu()">Contacto</a>
+        <a (click)="scrollTo('perfil')">Perfil</a>
+        <a (click)="scrollTo('trayectoria')">Trayectoria</a>
+        <a (click)="scrollTo('gestion')">Gestión</a>
+        <a (click)="scrollTo('contacto')">Contacto</a>
       </nav>
   
       <a href="https://estudiojuridico-frontend.pages.dev/" class="logo-link">

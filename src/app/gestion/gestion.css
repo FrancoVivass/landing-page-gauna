@@ -8,7 +8,7 @@ section {
   
   .subtitle {
     text-align: center;
-    color: #666;
+    color: var(--text-muted);
     margin-bottom: 48px;
   }
   
@@ -21,22 +21,22 @@ section {
   
   .logro-card {
     min-width: 260px;
-    background: white;
+    background: var(--color-tertiary);
     padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-medium);
   }
   
   .fecha {
     font-size: 11px;
-    color: #2563eb;
+    color: var(--color-secondary);
     font-weight: 600;
   }
   
   /* EJES */
   .ejes {
-    background: linear-gradient(135deg, #0f172a, #020617);
-    color: white;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-accurate));
+    color: var(--color-tertiary);
   }
   
   .ejes-grid {
@@ -48,13 +48,14 @@ section {
   }
   
   .eje {
-    background: rgba(255,255,255,.05);
+    background: rgba(255,255,255,.08);
     padding: 24px;
-    border-radius: 14px;
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(255,255,255,.1);
   }
   
   .eje span {
-    color: #38bdf8;
+    color: var(--color-secondary);
     font-weight: bold;
   }
   
@@ -66,15 +67,16 @@ section {
   }
   
   .noticia {
-    background: white;
+    background: var(--color-tertiary);
     padding: 20px;
-    border-radius: 12px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
   }
   
   /* MÉTRICAS */
   .metricas {
-    background: linear-gradient(135deg, #020617, #020617);
-    color: white;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-accurate));
+    color: var(--color-tertiary);
   }
   
   .metricas-grid {
@@ -86,13 +88,14 @@ section {
   }
   
   .metrica {
-    background: rgba(255,255,255,.05);
+    background: rgba(255,255,255,.08);
     padding: 24px;
-    border-radius: 14px;
+    border-radius: var(--radius-lg);
     text-align: center;
+    border: 1px solid rgba(255,255,255,.1);
   }
   
   .metrica strong {
     font-size: 28px;
-    color: #38bdf8;
+    color: var(--color-secondary);
   }

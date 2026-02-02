@@ -68,7 +68,7 @@
   /* PROFESIONAL */
   .professional {
     padding: 5rem 6rem;
-    background: #f8f9fb;
+    background: var(--bg-light);
   }
   
   .professional-container {
