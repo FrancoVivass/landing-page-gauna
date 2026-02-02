@@ -1,0 +1,289 @@
+/* =========================
+   TRAYECTORIA
+========================= */
+
+.trayectoria {
+    padding: 96px 0 0;
+    background: #f3f6fb;
+  }
+  
+  /* TITULO */
+  
+  .section-title {
+    text-align: center;
+    padding: 96px 24px 64px;
+    margin-bottom: 64px;
+  }
+  
+  .section-title h2 {
+    font-size: 22px;
+    letter-spacing: 0.08em;
+    color: var(--color-primary);
+  }
+  
+  .section-title span {
+    display: block;
+    width: 42px;
+    height: 3px;
+    background: var(--color-secondary);
+    margin: 12px auto 0;
+  }
+  
+  /* =========================
+     TIMELINE SIMPLE
+  ========================= */
+  
+  .timeline {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px;
+  }
+  
+  .timeline-item h4 {
+    font-size: 15px;
+  }
+  
+  .timeline-item small {
+    color: var(--color-secondary);
+    font-size: 11px;
+    font-weight: 600;
+  }
+  
+  .timeline-item p {
+    margin-top: 12px;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  /* =========================
+     CARRERA INSTITUCIONAL
+  ========================= */
+  
+  .career {
+    padding-bottom: 96px;
+  }
+  
+  .career-title {
+    text-align: center;
+    margin-bottom: 64px;
+  }
+  
+  .career-title h3 {
+    font-size: 22px;
+    color: var(--color-primary);
+  }
+  
+  .career-title span {
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--color-secondary);
+    margin: 12px auto 0;
+  }
+  
+  .career-timeline {
+    position: relative;
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  .career-timeline .line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #d1d5db;
+    transform: translateX(-50%);
+  }
+  
+  .career-item {
+    position: relative;
+    display: flex;
+    margin-bottom: 56px;
+  }
+  
+  .career-item.left {
+    justify-content: flex-start;
+  }
+  
+  .career-item.right {
+    justify-content: flex-end;
+  }
+  
+  .career-item .dot {
+    position: absolute;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    transform: translateX(-50%);
+    z-index: 2;
+  }
+  
+  .career-item.active .dot {
+    background: var(--color-secondary);
+    box-shadow: 0 0 0 6px rgba(192, 38, 109, 0.15);
+  }
+  
+  .career-item .content {
+    width: 42%;
+    background: white;
+    padding: 20px 24px;
+    border-radius: 10px;
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .content .period {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--color-secondary);
+  }
+  
+  .content h4 {
+    margin: 6px 0;
+    font-size: 15px;
+  }
+  
+  .content p {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  /* =========================
+     TRAYECTORIA PROFESIONAL
+  ========================= */
+  
+  .trayectoria-profesional {
+    background: #eef2f8;
+    padding: 64px 24px;
+    margin-top: 64px;
+  }
+  
+  .trayectoria-profesional h3 {
+    font-size: 20px;
+  }
+  
+  .trayectoria-profesional p {
+    color: #666;
+    margin-bottom: 32px;
+  }
+  
+  .cards,
+  .cards-carousel {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .card {
+    min-width: 260px;
+    background: white;
+    padding: 24px;
+    border-radius: 10px;
+    box-shadow: var(--shadow-soft);
+    scroll-snap-align: start;
+    border-top: 3px solid #3b82f6;
+  }
+  
+  .card:last-child {
+    background: #2563eb;
+    color: white;
+  }
+  
+  .card .year {
+    font-size: 13px;
+    font-weight: 600;
+  }
+  
+  /* =========================
+     GALERIA
+  ========================= */
+  
+  .galeria {
+    display: flex;
+    gap: 24px;
+    padding: 64px 24px;
+    overflow-x: auto;
+  }
+  
+  .galeria-card {
+    min-width: 520px;
+    height: 280px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 14px;
+    position: relative;
+  }
+  
+  .galeria-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+    display: flex;
+    align-items: flex-end;
+    padding: 24px;
+    color: white;
+  }
+  
+  /* =========================
+     FRASE
+  ========================= */
+  
+  .frase {
+    background: var(--color-secondary);
+    color: white;
+    text-align: center;
+    padding: 64px 24px;
+  }
+  
+  .frase p {
+    font-size: 20px;
+    font-style: italic;
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  .frase span {
+    display: block;
+    margin-top: 16px;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+  }
+  
+  /* =========================
+     RESPONSIVE
+  ========================= */
+  
+  @media (max-width: 768px) {
+  
+    .timeline {
+      grid-template-columns: 1fr;
+    }
+  
+    .career-timeline .line {
+      left: 8px;
+    }
+  
+    .career-item {
+      justify-content: flex-start !important;
+      padding-left: 32px;
+    }
+  
+    .career-item .dot {
+      left: 8px;
+    }
+  
+    .career-item .content {
+      width: 100%;
+    }
+  
+    .galeria-card {
+      min-width: 90%;
+    }
+  }
+  

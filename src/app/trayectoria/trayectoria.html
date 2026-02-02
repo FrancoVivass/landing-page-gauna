@@ -1,0 +1,92 @@
+<section id="trayectoria" class="trayectoria">
+
+    <!-- =========================
+         TITULO PRINCIPAL
+    ========================== -->
+    <header class="section-title">
+      <h2>TRAYECTORIA Y FORMACIÓN</h2>
+      <span></span>
+    </header>
+  
+    <!-- =========================
+         CARRERA INSTITUCIONAL
+    ========================== -->
+    <section class="career">
+  
+      <div class="career-title">
+        <h3>Carrera Institucional</h3>
+        <span></span>
+      </div>
+  
+      <div class="career-timeline">
+        <div class="line"></div>
+  
+        <div
+          class="career-item"
+          *ngFor="let c of careerTimeline"
+          [class.left]="c.side === 'left'"
+          [class.right]="c.side === 'right'"
+          [class.active]="c.active">
+  
+          <div class="dot"></div>
+  
+          <div class="content">
+            <span class="period">{{ c.period }}</span>
+            <h4>{{ c.title }}</h4>
+            <p>{{ c.text }}</p>
+          </div>
+  
+        </div>
+      </div>
+  
+    </section>
+  
+    <!-- =========================
+         TRAYECTORIA PROFESIONAL
+    ========================== -->
+    <section class="trayectoria-profesional">
+  
+      <h3>Trayectoria Profesional</h3>
+      <p>Hitos destacados en el servicio público y formación académica.</p>
+  
+      <div class="cards-carousel">
+        <article class="card" *ngFor="let t of trayectoriaProfesional">
+          <span class="year">{{ t.year }}</span>
+          <h4>{{ t.title }}</h4>
+          <p>{{ t.text }}</p>
+        </article>
+      </div>
+  
+    </section>
+  
+    <!-- =========================
+         GALERIA
+    ========================== -->
+    <section class="galeria">
+  
+      <article
+        class="galeria-card"
+        *ngFor="let g of galeria"
+        [style.backgroundImage]="'url(' + g.img + ')'">
+  
+        <div class="galeria-overlay">
+          <h4>{{ g.title }}</h4>
+        </div>
+  
+      </article>
+  
+    </section>
+  
+    <!-- =========================
+         FRASE FINAL
+    ========================== -->
+    <section class="frase">
+      <p>
+        “Nuestra misión es convertir cada dato en una acción preventiva
+        que salve vidas y devuelva la paz a las calles.”
+      </p>
+      <span>HORACIO G. GAUNA</span>
+    </section>
+  
+  </section>
+  

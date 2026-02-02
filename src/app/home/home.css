@@ -1,0 +1,306 @@
+.hero {
+
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    padding: 4rem 6rem;
+    background-color: var(--color-tertiary);
+    color: var(--color-primary);
+  }
+  
+  /* CONTENIDO */
+  .hero-content {
+    flex: 1;
+  }
+  
+  .tag {
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    font-weight: 600;
+    color: var(--color-secondary);
+    margin-bottom: 1.5rem;
+    display: inline-block;
+  }
+  
+  h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+  }
+  
+  .highlight {
+    color: var(--color-secondary);
+  }
+  
+  p {
+    max-width: 520px;
+    font-size: 1rem;
+    line-height: 1.7;
+    opacity: 0.8;
+    margin-bottom: 2.5rem;
+  }
+  
+  /* BOTONES */
+  .actions {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .btn {
+    padding: 0.9rem 2rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: var(--transition-fast);
+  }
+  
+  .btn.primary {
+    background-color: var(--color-primary);
+    color: var(--color-tertiary);
+    border: none;
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .btn.primary:hover {
+    background-color: var(--color-secondary);
+  }
+  
+  .btn.secondary {
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+  }
+  
+  .btn.secondary:hover {
+    background-color: var(--color-primary);
+    color: var(--color-tertiary);
+  }
+  
+  /* IMAGEN */
+  .hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .hero-image img {
+    max-width: 420px;
+    width: 100%;
+    border-radius: var(--radius-md);
+    filter: grayscale(100%);
+    box-shadow: var(--shadow-soft);
+  }
+  
+  /* ========================= */
+  /* 📱 RESPONSIVE */
+  /* ========================= */
+  
+  @media (max-width: 1024px) {
+    .hero {
+      padding: 3rem;
+      gap: 3rem;
+    }
+  
+    h1 {
+      font-size: 2.8rem;
+    }
+  
+    .hero-image img {
+      max-width: 340px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero {
+      flex-direction: column;
+      text-align: center;
+      padding: 2.5rem 1.5rem;
+    }
+  
+    .hero-content {
+      order: 1;
+    }
+  
+    .hero-image {
+      order: 2;
+      margin-top: 2rem;
+    }
+  
+    h1 {
+      font-size: 2.3rem;
+    }
+  
+    p {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    .actions {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  
+    .btn {
+      width: 100%;
+      max-width: 280px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.9rem;
+    }
+  
+    .tag {
+      font-size: 0.65rem;
+    }
+  
+    p {
+      font-size: 0.95rem;
+    }
+  }
+
+  /* ========================= */
+/* MISIÓN PROFESIONAL */
+/* ========================= */
+
+.mission {
+    padding: 5rem 6rem;
+    background-color: #f8f9fb;
+  }
+  
+  .mission-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+  
+  /* TEXTO */
+  .mission-text h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+  
+  .mission-text h2::before {
+    content: '';
+    position: absolute;
+    left: -50px;
+    top: 50%;
+    width: 35px;
+    height: 3px;
+    background-color: var(--color-secondary);
+    transform: translateY(-50%);
+  }
+  
+  .mission-text blockquote {
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: var(--color-primary);
+  }
+  
+  .mission-text p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    opacity: 0.8;
+  }
+  
+  /* TARJETAS */
+  .mission-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .mission-card {
+    background-color: var(--color-tertiary);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .mission-card h3 {
+    font-size: 0.85rem;
+    font-weight: 800;
+    margin-bottom: 0.3rem;
+    letter-spacing: 0.04em;
+  }
+  
+  .mission-card p {
+    font-size: 0.85rem;
+    opacity: 0.75;
+  }
+  
+  /* ICONOS */
+  .icon {
+    min-width: 42px;
+    height: 42px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    color: var(--color-tertiary);
+  }
+  
+  .icon.dark {
+    background-color: var(--color-primary);
+  }
+  
+  .icon.secondary {
+    background-color: var(--color-secondary);
+  }
+  
+  /* ========================= */
+  /* 📱 RESPONSIVE */
+  /* ========================= */
+  
+  @media (max-width: 1024px) {
+    .mission {
+      padding: 4rem 3rem;
+    }
+  
+    .mission-container {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+  
+    .mission-text h2::before {
+      left: 0;
+      top: -20px;
+      transform: none;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .mission {
+      padding: 3rem 1.5rem;
+    }
+  
+    .mission-text h2 {
+      text-align: center;
+    }
+  
+    .mission-text blockquote,
+    .mission-text p {
+      text-align: center;
+    }
+  
+    .mission-card {
+      text-align: left;
+    }
+  }
+  

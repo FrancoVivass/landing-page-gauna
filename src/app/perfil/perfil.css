@@ -1,0 +1,152 @@
+/* FRASE */
+.quote {
+    background-color: var(--color-secondary);
+    color: var(--color-tertiary);
+    padding: 3rem 1.5rem;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+  
+  /* PERFIL */
+  .profile {
+    padding: 5rem 6rem;
+  }
+  
+  .profile-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 4rem;
+  }
+  
+  .section-tag {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--color-secondary);
+    margin-bottom: 1rem;
+    display: inline-block;
+  }
+  
+  .profile-text p {
+    line-height: 1.7;
+    opacity: 0.8;
+    margin-bottom: 2rem;
+  }
+  
+  .profile-cards {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .mini-card {
+    background: var(--color-tertiary);
+    box-shadow: var(--shadow-soft);
+    border-radius: var(--radius-md);
+    padding: 1.2rem;
+    flex: 1;
+  }
+  
+  .mini-card h4 {
+    font-size: 0.85rem;
+    font-weight: 800;
+    margin-bottom: 0.3rem;
+  }
+  
+  .mini-card p {
+    font-size: 0.8rem;
+    opacity: 0.75;
+  }
+  
+  /* MEDIA */
+  .profile-media img {
+    width: 100%;
+    border-radius: var(--radius-md);
+  }
+  
+  /* PROFESIONAL */
+  .professional {
+    padding: 5rem 6rem;
+    background: #f8f9fb;
+  }
+  
+  .professional-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 4rem;
+  }
+  
+  .professional-image {
+    position: relative;
+  }
+  
+  .professional-image img {
+    width: 100%;
+    border-radius: var(--radius-md);
+  }
+  
+  .badge {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    background: var(--color-secondary);
+    color: white;
+    padding: 0.8rem;
+    border-radius: var(--radius-md);
+    font-size: 0.7rem;
+    font-weight: 700;
+  }
+  
+  /* METRICS */
+  .metrics {
+    background: var(--color-primary);
+    color: white;
+    padding: 4rem 1.5rem;
+  }
+  
+  .metrics-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    gap: 2rem;
+  }
+  
+  .metric span {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--color-secondary);
+  }
+  
+  /* RESPONSIVE */
+  @media (max-width: 1024px) {
+    .profile-container,
+    .professional-container {
+      grid-template-columns: 1fr;
+    }
+  
+    .profile,
+    .professional {
+      padding: 4rem 3rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .profile,
+    .professional {
+      padding: 3rem 1.5rem;
+    }
+  
+    .profile-cards {
+      flex-direction: column;
+    }
+  
+    .metrics-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  

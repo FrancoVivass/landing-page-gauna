@@ -1,0 +1,64 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,535;1,535&display=swap" rel="stylesheet">
+<header class="header">
+    <div class="header-inner">
+  
+      <div class="logo"></div>
+  
+      <nav class="nav-desktop">
+        <a (click)="irAPerfil()">Perfil</a>
+        <a href="#">Trayectoria</a>
+        <a href="#">Impacto</a>
+        <a href="#">Gestión</a>
+        <a href="#">Contacto</a>
+      </nav>
+  
+      <a href="https://estudiojuridico-frontend.pages.dev/" class="logo-link">
+        <div class="logo-estudio"></div>
+      </a>
+      
+  
+      <button class="hamburger" (click)="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+  
+    </div>
+  
+    <!-- OVERLAY -->
+    <div 
+      class="overlay" 
+      [class.show]="menuOpen" 
+      (click)="closeMenu()">
+    </div>
+  
+    <!-- DRAWER MOBILE -->
+    <aside class="drawer" [class.open]="menuOpen">
+  
+      <div class="drawer-header">
+        <div class="logo small"></div>
+        <button class="close" (click)="closeMenu()">✕</button>
+      </div>
+  
+      <nav class="drawer-nav">
+        <a (click)="irAPerfil()" (click)="closeMenu()">Perfil</a>
+        <a href="#" (click)="closeMenu()">Trayectoria</a>
+        <a href="#" (click)="closeMenu()">Impacto</a>
+        <a href="#" (click)="closeMenu()">Gestión</a>
+        <a href="#" (click)="closeMenu()">Contacto</a>
+      </nav>
+  
+      <a href="https://estudiojuridico-frontend.pages.dev/" class="logo-link">
+      <div class="drawer-actions">
+        <div class="logo-estudio"></div>
+      </div>
+      </a>
+      
+  
+    </aside>
+  </header>
+  
+  
+  

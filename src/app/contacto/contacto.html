@@ -1,0 +1,69 @@
+<section class="contacto" id="contacto">
+
+    <div class="contacto-container">
+  
+      <!-- TEXTO -->
+      <div class="contacto-info">
+        <h2>Contacto Institucional</h2>
+        <p>
+          Este canal está destinado a consultas institucionales,
+          propuestas de trabajo y comunicación formal.
+        </p>
+  
+        <ul>
+          <li><strong>Email:</strong> contacto@institucional.gob</li>
+          <li><strong>Ubicación:</strong> Ciudad Autónoma de Buenos Aires</li>
+        </ul>
+      </div>
+  
+      <!-- FORM -->
+      <form class="contacto-form" (ngSubmit)="sendEmail()">
+  
+        <label>
+          Nombre completo
+          <input
+            type="text"
+            required
+            [(ngModel)]="form.name"
+            name="name"
+          />
+        </label>
+  
+        <label>
+          Email
+          <input
+            type="email"
+            required
+            [(ngModel)]="form.email"
+            name="email"
+          />
+        </label>
+  
+        <label>
+          Mensaje
+          <textarea
+            rows="5"
+            required
+            [(ngModel)]="form.message"
+            name="message"
+          ></textarea>
+        </label>
+  
+        <button type="submit" [disabled]="loading">
+          {{ loading ? 'Enviando...' : 'Enviar mensaje' }}
+        </button>
+  
+        <p class="success" *ngIf="success">
+          ✔ Mensaje enviado correctamente.
+        </p>
+  
+        <p class="error" *ngIf="error">
+          ✖ Ocurrió un error. Intente nuevamente.
+        </p>
+  
+      </form>
+  
+    </div>
+  
+  </section>
+  
