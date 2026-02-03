@@ -7,7 +7,6 @@ Responde con la mayor precisión posible para que la página refleje fielmente s
 
 ## 1. IDENTIDAD Y MARCA
 
-- ¿Cuál es el nombre completo exacto que debe figurar en la página? (ej: Horacio G. Gauna)
 - ¿Existe un título o cargo oficial que deba acompañar el nombre? (ej: Dr., Lic., etc.)
 - ¿Qué etiqueta o frase corta define mejor la gestión? (ej: "Gestión Institucional", "Seguridad Ciudadana", etc.)
 - ¿Hay un eslogan o lema oficial de la gestión?
